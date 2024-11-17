@@ -1,0 +1,68 @@
+body {
+    background-color: #8A75FF;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.logo img {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+}
+.logo span {
+    font-size: 20px;
+    color: white;
+}
+.container {
+    text-align: center;
+}
+h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+.input-container {
+    margin-bottom: 20px;
+}
+.input-container input {
+    width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #E0E0E0;
+    text-align: center;
+    font-size: 16px;
+}
+.input-container a {
+    display: block;
+    margin-top: 10px;
+    color: #6D6D6D;
+    text-decoration: none;
+}
+.input-container a:hover {
+    text-decoration: underline;
+}
+.submit-btn {
+    width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #6D8EFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background-color: #5A75FF;
+}
