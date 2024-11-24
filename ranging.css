@@ -1,0 +1,233 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c3bfff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #9088ff;
+    color: white;
+    width: 100%;
+}
+
+/* Logo i nazwa strony */
+.logo {
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+    width: 15%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.dropdown-btn {
+    background-color: #9088ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer; 
+
+}
+
+.dropdown-btn:hover {
+    background-color: #9d96ff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #9088ff;
+    width: 70%;
+    z-index: 1;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #9d96ff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Pasek wyszukiwania */
+.search-container {
+    flex-grow: 1;
+    text-align: center;
+    width: 50%;
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 70%;
+    
+}
+
+input:focus{
+
+    outline: none;
+
+}
+
+/* Profil */
+.profile {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    width: 25%;
+
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+/* Ranking section */
+.ranking {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.podium-1, .podium-2, .podium-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d3d3d3;
+    padding: 20px;
+    border-radius: 12px;
+    width: 140px;
+    text-align: center;
+}
+
+.podium-1 {
+    height: 220px; 
+    background-color: #f0f0f0;
+}
+
+.podium-2 {
+    height: 180px; 
+    background-color: #e0e0e0;
+}
+
+.podium-3 {
+    height: 160px; 
+    background-color: #e0e0e0;
+}
+
+.podium-avatar {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.podium-username {
+    font-weight: bold;
+    font-size: 20px; 
+    color: #333;
+}
+
+/* Ranking list */
+.ranking-list {
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 250px; 
+    border-radius: 10px;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    background-color: #848484;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.ranking-number {
+    width: 30px;
+    text-align: center;
+}
+
+.ranking-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.ranking-username {
+    flex-grow: 1;
+}
+
+.ranking-score {
+    font-weight: bold;
+}
+
+/* Rewards section */
+.section {
+    width: 80%;
+    background-color: #cfcfcf;
+    margin: 10px 0;
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    color: #333;
+    border-radius: 10px;
+    box-sizing: border-box;
+}

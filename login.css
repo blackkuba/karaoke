@@ -73,5 +73,12 @@ input{
     background-color: #5A75FF;
 }
 
+input:focus{
+
+    outline: none;
+
+}
+
+
 
 
