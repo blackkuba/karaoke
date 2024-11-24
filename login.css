@@ -24,45 +24,54 @@ body {
     font-size: 20px;
     color: white;
 }
-.container {
-    text-align: center;
-}
+
 h1 {
     color: white;
     font-size: 48px;
     margin-bottom: 40px;
-}
-.input-container {
-    margin-bottom: 20px;
-}
-.input-container input {
-    width: 300px;
-    padding: 15px;
-    border: none;
-    border-radius: 25px;
-    background-color: #E0E0E0;
     text-align: center;
-    font-size: 16px;
 }
-.input-container a {
-    display: block;
-    margin-top: 10px;
-    color: #6D6D6D;
+
+form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+a{
+
+    color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
+
 }
-.input-container a:hover {
-    text-decoration: underline;
-}
-.submit-btn {
+
+input{
+
+    border-radius:  30px;
+    height: 50px;
     width: 300px;
-    padding: 15px;
+    margin: 10px;
+    text-align: center;
     border: none;
-    border-radius: 25px;
-    background-color: #6D8EFF;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+
 }
-.submit-btn:hover {
+
+.submit{
+
+    background-color: #b0c3ff;
+    width: 200px;
+    cursor: pointer;
+
+}
+
+.submit:hover {
     background-color: #5A75FF;
 }
+
+
+
