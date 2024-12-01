@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c3bfff;
+}
+
+/* Styl nagłówka */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #9088ff;
+    color: white;
+}
+
+/* Logo i nazwa strony */
+.logo {
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+    width: 15%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.dropdown-btn {
+    background-color: #9088ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer; 
+
+}
+
+.dropdown-btn:hover {
+    background-color: #9d96ff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #9088ff;
+    width: 70%;
+    z-index: 1;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #9d96ff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Pasek wyszukiwania */
+.search-container {
+    flex-grow: 1;
+    text-align: center;
+    width: 50%;
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 70%;
+    
+}
+
+input:focus{
+
+    outline: none;
+
+}
+
+/* Profil */
+.profile {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    width: 25%;
+
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+main{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* Styl dla dużych pasków */
+.large-bar {
+    height: 25vh; /* Każdy pasek zajmuje 25% wysokości widoku */
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #9088ff;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Styl elementów w paskach */
+.large-bar div {
+    flex: 1; /* Elementy zajmują równą przestrzeń */
+    margin: 5px;
+    height: 90%; /* Wysokość elementu 90% wysokości paska */
+    text-align: center;
+    line-height: calc(90% - 10px); /* Wyrównanie tekstu w środku */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #6a62e5;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.large-bar div:hover {
+    background-color: #9d96ff;
+    transform: scale(1.05); /* Lekkie powiększenie przy najechaniu */
+}
+
+
+
