@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strona glowna</title>
     <link rel="stylesheet" href="/public/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <header>
@@ -26,7 +28,7 @@
             <input type="text" placeholder="Szukaj..." class="search-bar">
         </div>
         <div class="profile">
-            <img src="profile.jpg" alt="Profil" class="profile-img">
+            <img src="/public/img/duke.jpg" alt="Profil" class="profile-img">
         </div>
     </header>
 
@@ -34,32 +36,118 @@
         <h1>Witaj na Singify!</h1>
         <!-- Pasek 1 -->
         <div class="large-bar">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+                <img src="/public/img/events.jpg" alt="fein">
+                <p>Events</p>
+            </div>
+            <div>
+                <img src="/public/img/kanye.jpg" alt="fein">
+                <p>Best Artists</p>
+            </div>
+            <div>
+                <img src="/public/img/updates.jpg" alt="fein">
+                <p>Nowści</p>
+            </div>
+            
         </div>
         <h1>Popularne Utwory</h1>
-        <!-- Pasek 2 -->
+        <!-- Pasek 2 - popularne utwory -->
         <div class="large-bar">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div data-song="Fein">
+                <img src="/public/img/fein.jpg" alt="Fein">
+                <p>Fein</p>
+            </div>
+            <div data-song="Judas">
+                <img src="/public/img/judas.jpg" alt="Judas">
+                <p>Judas</p>
+            </div>
+            <div data-song="Diamonds">
+                <img src="/public/img/diamonds.jpg" alt="Diamonds">
+                <p>Diamonds</p>
+            </div>
+            <div data-song="Dont Like">
+                <img src="/public/img/don_like.jpg" alt="Don't Like">
+                <p>Don't Like</p>
+            </div>
         </div>
         <h1>Popularne Playlisty</h1>
         <!-- Pasek 3 -->
         <div class="large-bar">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div data-playlist="Rap">
+                <img src="/public/img/rap.png" alt="Rap">
+                <p>Rap</p>
+            </div>
+            <div data-playlist="POP">
+                <img src="/public/img/pop.jpg" alt="POP">
+                <p>POP</p>
+            </div>
+            <div data-playlist="Drill">
+                <img src="/public/img/drill.jpg" alt="Drill">
+                <p>Drill</p>
+            </div>
+            <div data-playlist="Phonk">
+                <img src="/public/img/phonk.jpg" alt="Phonk">
+                <p>Phonk</p>
+            </div>
         </div>
     </main>
-    
-    
-    
-    
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Informacje o utworze</h2>
+            <p id="modal-text">Więcej informacji o wybranym utworze...</p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Informacje o playliście</h2>
+            <p id="modal-text">Więcej informacji o wybranej playliście...</p>
+        </div>
+    </div>
+
+
+<script>
+    // Zmienna dla modala
+const modal = document.getElementById('modal');
+const closeBtn = document.querySelector('.close-btn');
+const modalText = document.getElementById('modal-text'); // Element, gdzie będzie wyświetlana treść
+
+// Funkcja do otwierania modala i ustawiania treści
+function openModal(event) {
+    const playlist = event.target.closest('div').getAttribute('data-playlist'); // Pobranie wartości data-playlist
+    modalText.textContent = `Więcej informacji o playliście "${playlist}"`; // Ustawienie treści w modal
+    modal.style.display = 'flex'; // Wyświetlanie okienka
+}
+
+// Funkcja do zamykania modala
+function closeModal() {
+    modal.style.display = 'none'; // Ukrywanie okienka
+}
+
+// Kliknięcie w elementy "Rap", "POP", "Drill", "Phonk" itp.
+const playlistElements = document.querySelectorAll('.large-bar div');
+
+playlistElements.forEach(element => {
+    element.addEventListener('click', openModal); // Otwiera modal po kliknięciu w dowolny element w pasku
+});
+
+// Zamknięcie modala po kliknięciu na przycisk
+closeBtn.addEventListener('click', closeModal);
+
+// Zamknięcie modala po kliknięciu poza okienkiem
+window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+
+</script>
 
 </body>
 </html>

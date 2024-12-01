@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+h1{
+    color: white;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #c3bfff;
@@ -69,6 +73,11 @@ header {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
+
+.dropdown-btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
 
 .dropdown-content a {
     color: white;
@@ -154,18 +163,84 @@ main{
     color: white;
     font-size: 18px;
     font-weight: bold;
-    background-color: #6a62e5;
+    background-color: #000a31;
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.3s;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
 }
 
 .large-bar div:hover {
-    background-color: #9d96ff;
+    background-color: #000862;
     transform: scale(1.05); /* Lekkie powiększenie przy najechaniu */
 }
+
+.large-bar img{
+
+    height: 100%;
+    border-radius: 8px;
+    
+}
+
+.large-bar p{
+
+    width: 100%;
+    font-size: 30px;
+    user-select: none;
+    
+}
+
+/* Styl dla modala */
+.modal {
+    display: none; /* Domyślnie ukryte */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Przyciemnione tło */
+    color: white;
+    z-index: 9999; /* Umieszczenie na wierzchu */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: rgb(39, 39, 39);
+    width: 1200px;
+    height: 800px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: auto;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.modal p {
+    font-size: 18px;
+}
+
+
+
+
+
+
 
 
 
